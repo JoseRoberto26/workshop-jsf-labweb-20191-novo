@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+xmlns:h="http://xmlns.jcp.org/jsf/html"
+xmlns:f="http://xmlns.jcp.org/jsf/core"
+xmlns:p="http://primefaces.org/ui">
+<h:head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+<title>Form de Cadastro</title>
+</h:head>
+<h:body>
+
+
+	<h1>Cadastro</h1>
+	<h:form>
+	
+	<h:panelGrid columns="2">
+		Nome: <p:inputText/>
+		Senha: <h:inputSecret/>
+		Sexo: 
+		<h:selectOneMenu>
+			<f:selectItem itemLabel="Masculino" itemValue="M"/>
+			<f:selectItem itemLabel="Feminino" itemValue="F"/>
+			<f:selectItem itemLabel="Outros" itemValue="O"/>
+		</h:selectOneMenu>
+		
+		Estado Civil:
+		<h:selectOneRadio>
+		<f:selectItem itemLabel="Solteiro(a)" itemValue="S"/>
+			<f:selectItem itemLabel="Casado(a)" itemValue="C"/>
+			<f:selectItem itemLabel="Divorciado(a)" itemValue="D"/>
+			<f:selectItem itemLabel="Viuvo(a)" itemValue="V"/>		
+		</h:selectOneRadio>
+		
+		Observações: <h:inputTextarea rows="3" cols="20"/>
+		<p:commandButton value="Cadastrar"/>
+	</h:panelGrid>
+	</h:form>
+
+
+</h:body>
+</html>
